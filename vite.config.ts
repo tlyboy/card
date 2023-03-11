@@ -28,8 +28,7 @@ export default defineConfig({
     }),
     Pages(),
     AutoImport({
-      imports: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
-      dirs: ['./src/stores']
+      imports: ['vue', 'vue-router', 'pinia', '@vueuse/core']
     }),
     Components()
   ],

@@ -3,18 +3,19 @@ defineOptions({
   name: 'HomePage'
 })
 
-const card = ref(null)
+const card = $ref(null)
 
-const { elementX, elementY, elementWidth, elementHeight, isOutside } =
+const { elementX, elementY, elementWidth, elementHeight, isOutside } = $(
   useMouseInElement(card)
+)
 
-const transform = computed(() => {
-  if (isOutside.value) return `rotateX(0deg) rotateY(0deg)`
+const transform = $computed(() => {
+  if (isOutside) return `rotateX(0deg) rotateY(0deg)`
 
-  const x = elementX.value - elementWidth.value / 2
-  const y = elementY.value - elementHeight.value / 2
-  const rotateX = (y / elementHeight.value) * 20
-  const rotateY = (x / elementWidth.value) * -20
+  const x = elementX - elementWidth / 2
+  const y = elementY - elementHeight / 2
+  const rotateX = (y / elementHeight) * 20
+  const rotateY = (x / elementWidth) * -20
 
   return `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
 })
@@ -22,7 +23,7 @@ const transform = computed(() => {
 
 <template>
   <main class="home">
-    <div class="card" ref="card"></div>
+    <div class="card" ref="card" :style="{ transform }"></div>
   </main>
 </template>
 
@@ -42,6 +43,5 @@ const transform = computed(() => {
   background: url('@/assets/images/card.webp') center / cover no-repeat;
   border-radius: 1rem;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
-  transform: v-bind(transform);
 }
 </style>
