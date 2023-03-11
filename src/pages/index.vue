@@ -6,7 +6,7 @@ defineOptions({
 const card = $ref(null)
 
 const { elementX, elementY, elementWidth, elementHeight, isOutside } = $(
-  useMouseInElement(card)
+  useMouseInElement($$(card))
 )
 
 const transform = $computed(() => {
