@@ -14,8 +14,16 @@ module.exports = {
   },
   rules: {
     'no-undef': 'off',
-    'vue/multi-word-component-names': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    'vue/valid-attribute-name': 'off'
+    'vue/valid-attribute-name': 'off',
+    'vue/multi-word-component-names': 'off',
+    'vue/html-self-closing': [
+      'warn',
+      {
+        html: {
+          void: 'any'
+        }
+      }
+    ]
   }
 }

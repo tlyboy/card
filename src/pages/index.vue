@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { CSSProperties } from 'vue'
+
 defineOptions({
   name: 'HomePage'
 })
@@ -9,21 +11,24 @@ const { elementX, elementY, elementWidth, elementHeight, isOutside } = $(
   useMouseInElement($$(card))
 )
 
-const transform = $computed(() => {
-  if (isOutside) return `rotateX(0deg) rotateY(0deg)`
-
-  const x = elementX - elementWidth / 2
-  const y = elementY - elementHeight / 2
-  const rotateX = (y / elementHeight) * 20
-  const rotateY = (x / elementWidth) * -20
-
-  return `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
-})
+const style = $computed<CSSProperties>(() =>
+  isOutside
+    ? {
+        transform: `rotateX(0deg) rotateY(0deg)`
+      }
+    : {
+        transform: `rotateX(${
+          ((elementY - elementHeight / 2) / elementHeight) * 20
+        }deg) rotateY(${
+          ((elementX - elementWidth / 2) / elementWidth) * -20
+        }deg)`
+      }
+)
 </script>
 
 <template>
   <main class="home">
-    <div class="card" ref="card" :style="{ transform }"></div>
+    <div ref="card" class="card" :style="style" />
   </main>
 </template>
 
