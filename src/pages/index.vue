@@ -28,7 +28,7 @@ const style = $computed<CSSProperties>(() =>
 
 <template>
   <main class="home">
-    <div ref="card" class="card" :style="style" />
+    <div ref="card" class="card" :style="style"></div>
   </main>
 </template>
 
