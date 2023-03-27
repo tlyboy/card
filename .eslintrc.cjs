@@ -13,9 +13,10 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
-    'no-undef': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    'vue/multi-word-component-names': 'off',
     'vue/valid-attribute-name': 'off',
-    'vue/multi-word-component-names': 'off'
+    'vue/no-setup-props-destructure': 'off',
+    'no-undef': 'off',
+    '@typescript-eslint/no-unused-vars': 'off'
   }
 }
