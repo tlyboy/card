@@ -2,7 +2,7 @@
 import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'HomePage'
+  name: 'IndexPage'
 })
 
 const card = $ref(null)
@@ -27,13 +27,13 @@ const style = $computed<CSSProperties>(() =>
 </script>
 
 <template>
-  <main class="home">
+  <main class="index">
     <div ref="card" class="card" :style="style"></div>
   </main>
 </template>
 
 <style scoped>
-.home {
+.index {
   display: flex;
   flex-direction: column;
   justify-content: center;
