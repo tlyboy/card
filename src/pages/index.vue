@@ -5,22 +5,22 @@ defineOptions({
   name: 'IndexPage'
 })
 
-const card = $ref(null)
+const card = ref(null)
 
-const { elementX, elementY, elementWidth, elementHeight, isOutside } = $(
-  useMouseInElement($$(card))
-)
+const { elementX, elementY, elementWidth, elementHeight, isOutside } =
+  useMouseInElement(card)
 
-const style = $computed<CSSProperties>(() =>
-  isOutside
+const style = computed<CSSProperties>(() =>
+  isOutside.value
     ? {
         transform: `rotateX(0deg) rotateY(0deg)`
       }
     : {
         transform: `rotateX(${
-          ((elementY - elementHeight / 2) / elementHeight) * 20
+          ((elementY.value - elementHeight.value / 2) / elementHeight.value) *
+          20
         }deg) rotateY(${
-          ((elementX - elementWidth / 2) / elementWidth) * -20
+          ((elementX.value - elementWidth.value / 2) / elementWidth.value) * -20
         }deg)`
       }
 )

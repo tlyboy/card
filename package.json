@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@vue-macros/short-vmodel": "^1.2.3",
+    "@vue-macros/short-vmodel": "^1.2.4",
     "@vueuse/core": "^9.13.0",
     "normalize.css": "^8.0.1",
     "vue": "^3.2.47",
@@ -21,7 +21,7 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/node": "^18.15.11",
     "@vitejs/plugin-vue": "^4.1.0",
-    "@vue-macros/volar": "^0.9.4",
+    "@vue-macros/volar": "^0.9.5",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.2",
     "@vue/tsconfig": "^0.1.3",
