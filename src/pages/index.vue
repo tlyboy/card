@@ -13,7 +13,7 @@ const { elementX, elementY, elementWidth, elementHeight, isOutside } =
 const style = computed<CSSProperties>(() =>
   isOutside.value
     ? {
-        transform: `rotateX(0deg) rotateY(0deg)`
+        transform: 'rotateX(0deg) rotateY(0deg)'
       }
     : {
         transform: `rotateX(${
@@ -38,7 +38,7 @@ const style = computed<CSSProperties>(() =>
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
   perspective: 300px;
 }
 
