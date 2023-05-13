@@ -2,33 +2,33 @@
 import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'IndexPage'
+  name: 'IndexPage',
 })
 
 const card = ref(null)
 
-const { elementX, elementY, elementWidth, elementHeight, isOutside } =
-  useMouseInElement(card)
+const { elementX, elementY, elementWidth, elementHeight, isOutside }
+  = useMouseInElement(card)
 
 const style = computed<CSSProperties>(() =>
   isOutside.value
     ? {
-        transform: 'rotateX(0deg) rotateY(0deg)'
+        transform: 'rotateX(0deg) rotateY(0deg)',
       }
     : {
         transform: `rotateX(${
-          ((elementY.value - elementHeight.value / 2) / elementHeight.value) *
-          20
+          ((elementY.value - elementHeight.value / 2) / elementHeight.value)
+          * 20
         }deg) rotateY(${
           ((elementX.value - elementWidth.value / 2) / elementWidth.value) * -20
-        }deg)`
-      }
+        }deg)`,
+      },
 )
 </script>
 
 <template>
   <main class="index">
-    <div ref="card" class="card" :style="style"></div>
+    <div ref="card" class="card" :style="style" />
   </main>
 </template>
 

@@ -1,7 +1,7 @@
-import { fileURLToPath, URL } from 'node:url'
+import { URL, fileURLToPath } from 'node:url'
 
 import { defineConfig } from 'vite'
-// @ts-expect-error
+
 import VueMacros from 'unplugin-vue-macros/vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
@@ -13,18 +13,18 @@ export default defineConfig({
   plugins: [
     VueMacros({
       plugins: {
-        vue: Vue()
-      }
+        vue: Vue(),
+      },
     }),
     Pages(),
     AutoImport({
-      imports: ['vue', 'vue-router', '@vueuse/core']
+      imports: ['vue', 'vue-router', '@vueuse/core'],
     }),
-    Components()
+    Components(),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
 })

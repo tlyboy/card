@@ -2,11 +2,17 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
-    "types": ["unplugin-vue-macros/macros-global"]
+    "types": [
+      "unplugin-vue-macros/macros-global"
+    ]
   },
-  "exclude": ["src/**/__tests__/*"],
+  "exclude": [
+    "src/**/__tests__/*"
+  ],
   "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": [
     "src/**/*",
