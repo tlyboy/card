@@ -5,10 +5,8 @@ defineOptions({
   name: 'IndexPage',
 })
 
-const card = ref(null)
-
+const card = ref<HTMLDivElement | null>(null)
 const { elementX, elementY, elementWidth, elementHeight, isOutside } = useMouseInElement(card)
-
 const style = computed<CSSProperties>(() =>
   isOutside.value
     ? {
