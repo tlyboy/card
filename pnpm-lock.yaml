@@ -28,8 +28,8 @@ devDependencies:
     specifier: ^4.2.3
     version: 4.2.3(vite@4.3.8)(vue@3.3.4)
   '@vue-macros/volar':
-    specifier: ^0.10.0
-    version: 0.10.0(@vue-macros/reactivity-transform@0.3.8)(vue-tsc@1.6.5)(vue@3.3.4)
+    specifier: ^0.10.1
+    version: 0.10.1(@vue-macros/reactivity-transform@0.3.8)(vue-tsc@1.6.5)(vue@3.3.4)
   '@vue/tsconfig':
     specifier: ^0.4.0
     version: 0.4.0
@@ -747,7 +747,7 @@ packages:
       '@volar/source-map': 1.4.1
       '@vue/compiler-dom': 3.3.4
       '@vue/compiler-sfc': 3.3.4
-      '@vue/reactivity': 3.3.1
+      '@vue/reactivity': 3.3.4
       '@vue/shared': 3.3.4
       minimatch: 9.0.1
       muggle-string: 0.2.2
@@ -1041,11 +1041,11 @@ packages:
       - vue
     dev: true
 
-  /@vue-macros/volar@0.10.0(@vue-macros/reactivity-transform@0.3.8)(vue-tsc@1.6.5)(vue@3.3.4):
-    resolution: {integrity: sha512-tvH0R9gRe9uh2Mtd2XMhn/I3kpEX+cmYtzBW5iiJqJedrRBv+W6/h7RC+YD/QxPMVlmlajngc/QL1ioY4UaQLQ==}
+  /@vue-macros/volar@0.10.1(@vue-macros/reactivity-transform@0.3.8)(vue-tsc@1.6.5)(vue@3.3.4):
+    resolution: {integrity: sha512-VvQHSjQp7nFRgVWAFpg9USxzhbNS+X6XVhLrH3n6YXR4XxkIPbbwFTp4wvsFfbrjf+n5ldQQ0qMDJFM8odhTVw==}
     engines: {node: '>=16.14.0'}
     peerDependencies:
-      vue-tsc: '>=1.6.0'
+      vue-tsc: ^1.6.0
     peerDependenciesMeta:
       vue-tsc:
         optional: true
@@ -1110,12 +1110,6 @@ packages:
       estree-walker: 2.0.2
       magic-string: 0.30.0
 
-  /@vue/reactivity@3.3.1:
-    resolution: {integrity: sha512-zCfmazOtyUdC1NS/EPiSYJ4RqojqmTAviJyBbyVvY8zAv5NhK44Yfw0E1tt+m5vz0ZO1ptI9jDKBr3MWIEkpgw==}
-    dependencies:
-      '@vue/shared': 3.3.1
-    dev: true
-
   /@vue/reactivity@3.3.4:
     resolution: {integrity: sha512-kLTDLwd0B1jG08NBF3R5rqULtv/f8x3rOFByTDz4J53ttIQEDmALqKqXY0J+XQeN0aV2FBxY8nJDf88yvOPAqQ==}
     dependencies:
@@ -1142,10 +1136,6 @@ packages:
       '@vue/compiler-ssr': 3.3.4
       '@vue/shared': 3.3.4
       vue: 3.3.4
-
-  /@vue/shared@3.3.1:
-    resolution: {integrity: sha512-ybDBtQ+479HL/bkeIOIAwgpeAEACzztkvulJLbK3JMFuTOv4qDivmV3AIsR8RHYJ+RD9tQxcHWBsX4GqEcYrfw==}
-    dev: true
 
   /@vue/shared@3.3.4:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}
