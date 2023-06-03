@@ -19,7 +19,8 @@
     "src/**/*.vue",
     "auto-imports.d.ts",
     "components.d.ts",
-    "env.d.ts"
+    "env.d.ts",
+    "typed-router.d.ts"
   ],
   "vueCompilerOptions": {
     "plugins": [
