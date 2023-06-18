@@ -1,6 +1,5 @@
 [build.environment]
   TZ = "Asia/Shanghai"
-  NODE_VERSION = "16"
 
 [build]
   publish = "dist"
