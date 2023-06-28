@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",
-    "@tsconfig/node18": "^2.0.1",
+    "@tsconfig/node18": "^18.2.0",
     "@types/node": "^18.16.18",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue-macros/volar": "^0.11.0",
