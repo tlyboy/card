@@ -2,7 +2,7 @@ import { URL, fileURLToPath } from 'node:url'
 
 import { defineConfig } from 'vite'
 
-import VueMacros from 'unplugin-vue-macros'
+import VueMacros from 'unplugin-vue-macros/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -13,7 +13,7 @@ import Components from 'unplugin-vue-components/vite'
 export default defineConfig({
   plugins: [
     VueRouter(),
-    VueMacros.vite({
+    VueMacros({
       plugins: {
         vue: Vue(),
       },

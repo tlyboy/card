@@ -7,14 +7,13 @@ defineOptions({
 
 const card = ref<HTMLDivElement | null>(null)
 const { elementX, elementY, elementWidth, elementHeight, isOutside } = useMouseInElement(card)
-const style = computed<CSSProperties>(() =>
-  isOutside.value
-    ? {
-        transform: 'rotateX(0deg) rotateY(0deg)',
-      }
-    : {
-        transform: `rotateX(${((elementY.value - elementHeight.value / 2) / elementHeight.value) * 20}deg) rotateY(${((elementX.value - elementWidth.value / 2) / elementWidth.value) * -20}deg)`,
-      },
+const style = computed<CSSProperties>(() => isOutside.value
+  ? {
+      transform: 'rotateX(0deg) rotateY(0deg)',
+    }
+  : {
+      transform: `rotateX(${((elementY.value - elementHeight.value / 2) / elementHeight.value) * 20}deg) rotateY(${((elementX.value - elementWidth.value / 2) / elementWidth.value) * -20}deg)`,
+    },
 )
 </script>
 
